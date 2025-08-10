@@ -43,8 +43,8 @@ OsmanliYatirimPW/
 
 1. Projeyi klonlayın:
 ```bash
-git clone <repository-url>
-cd OsmanliYatirimPW
+git clone https://github.com/emregitrepo/osmpw.git
+cd osmpw
 ```
 
 2. Bağımlılıkları yükleyin:
@@ -103,7 +103,7 @@ mvn test -Dcucumber.filter.tags="@browser"
 ### Yeni Feature Ekleme
 1. `src/test/resources/features/` klasörüne `.feature` dosyası ekleyin
 2. Gherkin syntax kullanarak senaryoları yazın
-3. `src/test/java/stepdefs/` klasörüne step definitions ekleyin
+3. `src/test/java/stepDefinitions/` klasörüne step definitions ekleyin
 
 ### Yeni Step Definition Ekleme
 1. Mevcut `LoginStepDef.java` dosyasına yeni metodlar ekleyin
@@ -177,7 +177,7 @@ Test çalıştırıldıktan sonra raporlar şu konumlarda oluşturulur:
 
 2. **Cucumber step bulunamadı hatası**:
    - Step definition'ların doğru package'ta olduğunu kontrol edin
-   - CucumberTestRunner'da glue path'in doğru olduğunu kontrol edin
+   - CukesRunner'da glue path'in doğru olduğunu kontrol edin
 
 3. **Element bulunamadı hatası**:
    - Locator'ların güncel olduğunu kontrol edin
@@ -186,15 +186,16 @@ Test çalıştırıldıktan sonra raporlar şu konumlarda oluşturulur:
 ## 📞 İletişim
 
 Proje ile ilgili sorularınız için:
-- **Geliştirici**: [Geliştirici Adı]
-- **Email**: [Email Adresi]
+- **Geliştirici**: Emre Can Akbulut
+- **Email**: emrecanakbulut@gmail.com
 - **Proje**: Osmanli Yatirim Test Otomasyonu
+- **Repository**: https://github.com/emregitrepo/osmpw.git
 
 ## 📄 Lisans
 
-Bu proje [Lisans Adı] altında lisanslanmıştır.
+Bu proje MIT lisansı altında lisanslanmıştır.
 
 ---
 
-**Son Güncelleme**: $(date)
-**Versiyon**: 1.0.0
+**Son Güncelleme**: 2024-12-19
+**Versiyon**: 1.1.0
