@@ -1,6 +1,7 @@
 package stepDefinitions;
 
 import com.microsoft.playwright.Page;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import pages.LoginPage;
 import utilities.Driver;
@@ -18,13 +19,30 @@ public class LoginStepDef {
     }
 
     @Given("Open the Osmanli Yatirim login page")
-    public void openTheOsmanliYatirimLoginPage() {
+    public void openTheOsmanliYatirimLoginPage() throws InterruptedException {
         loginPage.openLoginPage();
+       Thread.sleep(3000);
         // Sayfanın yüklendiğini kontrol et
-        if (loginPage.isPageLoaded()) {
-            System.out.println("Login sayfası başarıyla açıldı");
-        } else {
-            throw new RuntimeException("Login sayfası yüklenemedi");
-        }
+
+    }
+
+    @And("enter account no")
+    public void enterAccountNo() {
+        loginPage.enterAccountNo();
+    }
+
+    @And("enter password")
+    public void enterPassword() {
+        loginPage.enterpasswordNo();
+    }
+
+    @And("click login button")
+    public void clickLoginButton() {
+        loginPage.clickLoginButton();
+    }
+
+    @And("enter sms code")
+    public void enterSmsCode() throws InterruptedException {
+        loginPage.enterSmsPassword();
     }
 }
